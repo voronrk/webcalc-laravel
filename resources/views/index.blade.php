@@ -1,1 +1,1 @@
-Clear page
+{{ $data }}
