@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Currency;
-use App\Http\Requests\StoreCurrencyRequest;
-use App\Http\Requests\UpdateCurrencyRequest;
+use App\Models\JobTariff;
+use App\Http\Requests\StoreJobTariffRequest;
+use App\Http\Requests\UpdateJobTariffRequest;
 use Illuminate\Http\Response;
 
-class CurrencyController extends Controller
+class JobTariffController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +16,7 @@ class CurrencyController extends Controller
      */
     public function index()
     {
-        return Currency::all();
+        return JobTariff::all();
     }
 
     /**
@@ -32,10 +32,10 @@ class CurrencyController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreCurrencyRequest  $request
+     * @param  \App\Http\Requests\StoreJobTariffRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreCurrencyRequest $request)
+    public function store(StoreJobTariffRequest $request)
     {
         //
     }
@@ -43,21 +43,21 @@ class CurrencyController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Currency  $currency
+     * @param  \App\Models\JobTariff  $jobTariff
      * @return \Illuminate\Http\Response
      */
-    public function show(Currency $currency)
+    public function show(JobTariff $jobTariff)
     {
-        return ['title' => $currency->title, 'value' => $currency->value];
+        return ['grade' => $jobTariff->grade, 'value' => $jobTariff->value];
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Currency  $currency
+     * @param  \App\Models\JobTariff  $jobTariff
      * @return \Illuminate\Http\Response
      */
-    public function edit(Currency $currency)
+    public function edit(JobTariff $jobTariff)
     {
         //
     }
@@ -65,11 +65,11 @@ class CurrencyController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateCurrencyRequest  $request
-     * @param  \App\Models\Currency  $currency
+     * @param  \App\Http\Requests\UpdateJobTariffRequest  $request
+     * @param  \App\Models\JobTariff  $jobTariff
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateCurrencyRequest $request, Currency $currency)
+    public function update(UpdateJobTariffRequest $request, JobTariff $jobTariff)
     {
         //
     }
@@ -77,10 +77,10 @@ class CurrencyController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Currency  $currency
+     * @param  \App\Models\JobTariff  $jobTariff
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Currency $currency)
+    public function destroy(JobTariff $jobTariff)
     {
         //
     }

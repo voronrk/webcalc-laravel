@@ -16,7 +16,5 @@ use Illuminate\Http\Request;
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('index', ['data' => 'Index']);
 });
-
-Route::resource('currency', CurrencyController::class);

@@ -13,11 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('currencies', function (Blueprint $table) {
-            $table->string('title')->unique();
-            $table->float('value')->unsigned();
+        Schema::create('workers', function (Blueprint $table) {
+            $table->id();
             $table->timestamps();
-            $table->primary('title');
+            $table->string('position');
+            $table->string('grade');
+
+            $table->foreign('grade')->references('grade')->on('job_tariffs');
         });
     }
 
@@ -28,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('currencies');
+        Schema::dropIfExists('workers');
     }
 };
