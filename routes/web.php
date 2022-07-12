@@ -19,3 +19,8 @@ use Illuminate\Http\Request;
 Route::get('/', function () {
     return view('index', ['data' => 'Index']);
 });
+
+Route::get('/currency/{currency}', [CurrencyController::class, 'show']);
+Route::get('/currency', [CurrencyController::class, 'index']);
+Route::get('/jobtariff/{jobtariff}', [JobtariffController::class, 'show']);
+Route::get('/jobtariff', [JobtariffController::class, 'index']);
