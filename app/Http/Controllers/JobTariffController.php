@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\JobTariff;
-use App\Http\Requests\StoreJobTariffRequest;
-use App\Http\Requests\UpdateJobTariffRequest;
+use App\Models\Jobtariff;
+use App\Http\Requests\StoreJobtariffRequest;
+use App\Http\Requests\UpdateJobtariffRequest;
 use Illuminate\Http\Response;
 
-class JobTariffController extends Controller
+class JobtariffController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +16,7 @@ class JobTariffController extends Controller
      */
     public function index()
     {
-        return JobTariff::all();
+        return Jobtariff::all();
     }
 
     /**
@@ -32,10 +32,10 @@ class JobTariffController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreJobTariffRequest  $request
+     * @param  \App\Http\Requests\StoreJobtariffRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreJobTariffRequest $request)
+    public function store(StoreJobtariffRequest $request)
     {
         //
     }
@@ -43,21 +43,21 @@ class JobTariffController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\JobTariff  $jobTariff
+     * @param  \App\Models\Jobtariff  $jobtariff
      * @return \Illuminate\Http\Response
      */
-    public function show(JobTariff $jobTariff)
+    public function show(Jobtariff $jobtariff)
     {
-        return ['grade' => $jobTariff->grade, 'value' => $jobTariff->value];
+        return ['grade' => $jobtariff->grade, 'value' => $jobtariff->value];
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\JobTariff  $jobTariff
+     * @param  \App\Models\Jobtariff  $jobtariff
      * @return \Illuminate\Http\Response
      */
-    public function edit(JobTariff $jobTariff)
+    public function edit(Jobtariff $jobtariff)
     {
         //
     }
@@ -65,11 +65,11 @@ class JobTariffController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateJobTariffRequest  $request
-     * @param  \App\Models\JobTariff  $jobTariff
+     * @param  \App\Http\Requests\UpdateJobtariffRequest  $request
+     * @param  \App\Models\Jobtariff  $jobtariff
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateJobTariffRequest $request, JobTariff $jobTariff)
+    public function update(UpdateJobtariffRequest $request, Jobtariff $jobtariff)
     {
         //
     }
@@ -77,10 +77,10 @@ class JobTariffController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\JobTariff  $jobTariff
+     * @param  \App\Models\Jobtariff  $jobtariff
      * @return \Illuminate\Http\Response
      */
-    public function destroy(JobTariff $jobTariff)
+    public function destroy(Jobtariff $jobtariff)
     {
         //
     }

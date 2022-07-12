@@ -16,9 +16,9 @@ use App\Http\Controllers\JobTariffController;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+// Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
 
 Route::resource('currency', CurrencyController::class);
 Route::resource('jobtariff', JobTariffController::class);

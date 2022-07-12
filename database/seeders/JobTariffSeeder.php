@@ -42,7 +42,7 @@ class JobTariffSeeder extends Seeder
             ],
         ];
         foreach($ar as $item) {
-            JobTariff::create(['grade' => $item['grade'], 'value' => $item['value']]);
+            Jobtariff::create(['grade' => $item['grade'], 'value' => $item['value']]);
         };
     }
 }

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CurrencyController;
+use App\Http\Controllers\JobTariffController;
 use Illuminate\Http\Request;
 
 /*

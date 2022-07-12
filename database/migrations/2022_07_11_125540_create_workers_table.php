@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('position');
             $table->string('grade');
 
-            $table->foreign('grade')->references('grade')->on('job_tariffs');
+            $table->foreign('grade')->references('grade')->on('jobtariffs');
         });
     }
 
