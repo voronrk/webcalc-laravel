@@ -13,13 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('workers', function (Blueprint $table) {
+        Schema::create('material_properties', function (Blueprint $table) {
             $table->id();
+            $table->bigInteger('material_id')->unsigned();
+            $table->foreign('material_id')->references('id')->on('materials');
+            $table->bigInteger('property_id')->unsigned();
+            $table->foreign('property_id')->references('id')->on('properties');
+            $table->string('value');
             $table->timestamps();
-            $table->string('position');
-            $table->bigInteger('jobtariff_grade');
-
-            $table->foreign('jobtariff_grade')->references('grade')->on('jobtariffs');
         });
     }
 
@@ -30,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('workers');
+        Schema::dropIfExists('material_properties');
     }
 };

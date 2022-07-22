@@ -30,7 +30,7 @@ class WorkerSeeder extends Seeder
             ],
         ];
         foreach($ar as $item) {
-            Worker::create(['position' => $item['position'], 'grade' => $item['grade']]);
+            Worker::create(['position' => $item['position'], 'jobtariff_grade' => $item['grade']]);
         };
     }
 }

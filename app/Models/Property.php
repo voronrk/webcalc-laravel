@@ -5,12 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Worker extends Model
+class Property extends Model
 {
     use HasFactory;
-
-    function jobtariff()
-    {
-        return $this->hasOne(Jobtariff::class, 'grade', 'jobtariff_grade');
-    }
 }

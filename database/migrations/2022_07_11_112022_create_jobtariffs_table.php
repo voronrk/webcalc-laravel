@@ -14,10 +14,11 @@ return new class extends Migration
     public function up()
     {
         Schema::create('jobtariffs', function (Blueprint $table) {
-            $table->string('grade')->unique();
+            $table->bigInteger('grade');
+            $table->primary('grade');
             $table->float('value')->unsigned();
             $table->timestamps();
-            $table->primary('grade');
+            
         });
     }
 

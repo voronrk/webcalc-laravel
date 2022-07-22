@@ -17,5 +17,8 @@ class DatabaseSeeder extends Seeder
         $this->call(JobTariffSeeder::class);
         $this->call(CurrencySeeder::class);
         $this->call(WorkerSeeder::class);
+        $this->call(PropertySeeder::class);
+        $this->call(MaterialSeeder::class);
+        $this->call(MaterialPropertySeeder::class);
     }
 }

@@ -13,4 +13,9 @@ class Jobtariff extends Model
     {
         return 'grade';
     }
+
+    // function workers()
+    // {
+    //     return $this->belongsTo(Worker::class);
+    // }
 }

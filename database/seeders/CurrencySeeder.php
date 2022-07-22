@@ -22,11 +22,11 @@ class CurrencySeeder extends Seeder
             ],
             [
                 'title' => 'USD',
-                'value' => 120,
+                'value' => 65,
             ],
             [
                 'title' => 'EUR',
-                'value' => 130
+                'value' => 70
             ],
         ];
         foreach($ar as $item) {
